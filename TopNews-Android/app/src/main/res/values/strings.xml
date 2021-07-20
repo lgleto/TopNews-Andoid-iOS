@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TopNews</string>
+    <string name="title_general">Geral</string>
+    <string name="title_business">Economia</string>
+    <string name="title_science">Ciência</string>
+    <string name="title_sports">Desporto</string>
+    <string name="share">Partilhar</string>
+</resources>

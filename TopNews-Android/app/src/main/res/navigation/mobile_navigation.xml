@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_general">
+
+    <fragment
+        android:id="@+id/navigation_general"
+        android:name="ipca.example.topnews.ui.GeneralArticlesFragment"
+        android:label="@string/title_general"
+        tools:layout="@layout/fragment_articles" />
+    <fragment
+        android:id="@+id/navigation_business"
+        android:name="ipca.example.topnews.ui.BusinessArticlesFragment"
+        android:label="@string/title_business"
+        tools:layout="@layout/fragment_articles" />
+    <fragment
+        android:id="@+id/navigation_sports"
+        android:name="ipca.example.topnews.ui.SportsArticlesFragment"
+        android:label="@string/title_sports"
+        tools:layout="@layout/fragment_articles" />
+
+    <fragment
+        android:id="@+id/navigation_science"
+        android:name="ipca.example.topnews.ui.ScienceArticlesFragment"
+        android:label="@string/title_science"
+        tools:layout="@layout/fragment_articles" />
+
+</navigation>

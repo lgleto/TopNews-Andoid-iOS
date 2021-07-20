@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_general"
+        android:icon="@drawable/ic_baseline_text_snippet_24"
+        android:title="@string/title_general" />
+
+    <item
+        android:id="@+id/navigation_business"
+        android:icon="@drawable/ic_baseline_attach_money_24"
+        android:title="@string/title_business" />
+
+    <item
+        android:id="@+id/navigation_science"
+        android:icon="@drawable/ic_baseline_science_24"
+        android:title="@string/title_science" />
+
+    <item
+        android:id="@+id/navigation_sports"
+        android:icon="@drawable/ic_baseline_sports_handball_24"
+        android:title="@string/title_sports" />
+
+</menu>

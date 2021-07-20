@@ -1,0 +1,90 @@
+swagger: '2.0'
+info:
+  version: '1.0.0'
+  title: News App
+  description: newsapi api with one end-point.
+
+host: newsapi.org
+basePath: /v2
+schemes:
+  - https
+  - http
+
+paths:
+  /top-headlines:
+    get:
+      description: Get user playlists
+      tags:
+        - News
+      consumes:
+        - application/json
+        - text/json
+      produces:
+        - text/plain
+        - application/json
+        - text/json
+        - application/*+json
+      parameters:
+        - in: query
+          name: country
+          required: false
+          type: string
+        - in: query
+          name: category
+          required: false
+          type: string
+        - in: query
+          name: apiKey
+          required: false
+          type: string
+      responses:
+        '200':
+          description: Success
+          schema:
+            "$ref": "#/definitions/Articles"
+
+
+
+definitions:
+
+  Source:
+    type: object
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+
+
+  Article:
+    type: object
+    properties:
+      source:
+        "$ref": "#/definitions/Source"
+      author:
+        type: string
+      title:
+        type: string
+      description:
+        type: string
+      url:
+        type: string
+      urlToImage:
+        type: string
+      publishedAt:
+        type: string
+      content:
+        type: string
+
+  Articles:
+    type: object
+    properties:
+      status:
+        type: string
+      totalResults:
+        type: integer
+      articles:
+        type: array
+        items:
+          "$ref": "#/definitions/Article"
+
