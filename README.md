@@ -103,8 +103,8 @@ Room will be used in this example to store the server data. Since Swagger is use
 | - jsonString : String? |
 | - category   : String  |
 
-In the `ArticleCahce` model the `url` will be used as primary key and the jsonString will store the `Article` in JSON string format. Finally `category` will be used to store the category of the articles, since this property is not a part of the API, but it is essential to know in what context a particular article should be shown.
-The following code shows how To specify this class in Android using Room.
+In the `ArticleCache` model the `url` will be used as primary key and the jsonString will store the `Article` in a JSON string format. Finally `category` will be used to store the category of the article, since this property is not a part of the API, but it is essential to know in what context a particular article should be shown.
+The following code shows how to specify this class in Android using Room.
 
 ```kotlin
 @Entity
@@ -114,8 +114,8 @@ class ArticleCache( @field:PrimaryKey
                     var category   : String) 
 ```
 
-Next, it will be declared an interface with the Data Access Object (DAO) where CRUD operations are implemented using `Query` annotations on top of each function signature.
-These functions are also marked as "suspend" so  that the compiler knows that the contents block the "thread" on which they are running.
+Next, it will be declared an interface with the Data Access Object (DAO) where CRUD operations are implemented using `Query` annotation on top of each function signature.
+These functions are also marked as "suspend" so the compiler knows it's content block the "thread" on which they are running.
 
 ```kotlin
 @Dao
@@ -164,7 +164,7 @@ abstract class AppDatabase : RoomDatabase() {
 }
 ```
 
-`fallbackToDestructiveMigration` garanties that the databases is rebuilted when when the datbase version is changed. That happens in most of the case that apps can retrive old data from the API.
+`fallbackToDestructiveMigration` garanties that the databases is rebuilted destroing stored date when the database version is changed. That happens in most of the cases that apps that can retrive old data from the API.
 
 ### Remote Data Source - Backend
 
@@ -317,7 +317,7 @@ Apple still stand with [MVC](https://developer.apple.com/library/archive/documen
 
 ![iOS app arquitecture](docs/ios-architecture.png "iOS app arquitecture")
 
-### Modelo - CoreData
+### Model - CoreData
 
 On Xcode we can create the data model using CoreData designer and we hit `Create NSManagedObject Subclass` on `Editor`the following extension will be generated.
 
