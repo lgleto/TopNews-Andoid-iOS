@@ -4,21 +4,18 @@ Mixing Android and iOS programming concepts
 Summary
 -------
 
-This project describes a guide for iOS and Android mobile app development, taking into consideration the guide lines provideded by the architecture manufacturers in current analysis.
-The goal is to define a single guideline for the development of iOS and Android apps wirtten in native languages.
-The focus it's on app engine of both architectures, starting by data acquisition via an API, presitent storage and displaying data to the end user. The goal it's to make easier the devolpment, support and maintaince of both applications.
+This project describes a guide for iOS and Android mobile app development, taking into consideration the guidelines provided by the architecture manufacturers in current analysis. The goal is to define a single guideline for the development of iOS and Android apps written in native languages. The focus it's on app engine of both architectures, starting by data acquisition via an API, persistent storage and displaying data to the end user. The goal it's to make easier the development, support and maintenance of both applications.
 
 Introduction
 ------------
 
-To do this demostration it will be used a common application as an example that exchanges information with a server through a REST API, and that displays that information to the user. It also store this information so that it can be accessed in offline mode. This same information should be updated whenever the app establishes connection with the server.
-The app will be news app that displays a list of articles in the first screen followed by an article detail, when an article is touched. The article detail sould presente the web page in the newspaper website or picture with the title and the discription if the mobile phone is offline.
+To do this demonstration it will be used a common application as an example that exchanges information with a server through a REST API, and that displays that information to the user. It also stores this information so that it can be accessed in offline mode. This same information should be updated whenever the app establishes connection with the server. The app will be news app that displays a list of articles in the first screen followed by an article detail, when an article is touched. The article detail should present the web page in the newspaper website or picture with the title and the description if the mobile phone is offline.
 
 ![App example](docs/mobile-app.png "App example")
 
 #### API - newsapi.org
 
-It will be used newsapi as the REST API to provide the news. The following request retrive the latest news for a particular country.
+It will be used newsapi as the REST API to provide the news. The following request retrieve the latest news for a particular country.
 
 Request:
 ```
@@ -64,7 +61,7 @@ Response:
 
 In order to reduce the written code by the developer we will use OPENAPI to describe the requests and the data models from the server, and than generate code with swagger for booth Android and iOS.
 
-This [file](app/src/main/java/swagger.yaml) discribes the API following the [OpenAPI](https://oai.github.io) specification.
+This [file](app/src/main/java/swagger.yaml) describes  the API following the [OpenAPI](https://oai.github.io) specification.
 
 Now using [Swagger](https://swagger.io) code generator we can reduce the API call on Android to this:
 
@@ -87,7 +84,7 @@ Google proposes the following type of architecture represented in next picture:
 
 ![App example](docs/android-architecture.png "App example")
 
-The full discription of the architecture can be found [here](https://developer.android.com/guide/components/activities/activity-lifecycle).
+The full description of the architecture can be found [here](https://developer.android.com/guide/components/activities/activity-lifecycle).
 
 Starting from the bottom up now it will be described the implementation of each component represented in the picture.
 
@@ -103,7 +100,7 @@ Room will be used in this example to store the server data. Since Swagger is use
 | - jsonString : String? |
 | - category   : String  |
 
-In the `ArticleCache` model the `url` will be used as primary key and the jsonString will store the `Article` in a JSON string format. Finally `category` will be used to store the category of the article, since this property is not a part of the API, but it is essential to know in what context a particular article should be shown.
+In the `ArticleCache` model the `url` will be used as primary key and the jsonString will store the `Article` in a JSON string format. Finally, `category` will be used to store the category of the article, since this property is not a part of the API, but it is essential to know in what context a particular article should be shown.
 The following code shows how to specify this class in Android using Room.
 
 ```kotlin
@@ -164,11 +161,11 @@ abstract class AppDatabase : RoomDatabase() {
 }
 ```
 
-`fallbackToDestructiveMigration` garanties that the databases is rebuilted destroing stored date when the database version is changed. That happens in most of the cases that apps that can retrive old data from the API.
+`fallbackToDestructiveMigration` guaranties that database is rebuild when the database version is changed. That happens in most of the case that apps can retrieve old data from the API.
 
 ### Remote Data Source - Backend
 
-On the backend class it will be initialized the HTTP access to yout API using `OkHttp` and also to initialize `Retrofit` that holds the `OkHttpClient`, the API url and it is responsible to convert the JSON objects responsoses from the API into Kotlin data models.
+On the backend class it will be initialized the HTTP access to your API using `OkHttp` and also to initialize `Retrofit` that holds the `OkHttpClient`, the API url and it is responsible to convert the JSON objects responses from the API into Kotlin data models.
 
 ```kotlin
 class Backend {
@@ -193,10 +190,11 @@ class Backend {
 
 ### Repository
 
-The repository class it's responsible to gather data from the server and store it on the local datbase withou duplicating it. When the user opens the app he will see firstly the date store on the mobile and than the data fetched from the server.
+The repository class it's responsible to gather data from the server and store it on the local database without duplicating it. When the user opens the app, he will see firstly the date store on the mobile and then the data fetched from the server.
 This class is defined by the `Singleton` pattern that allows the object of this class to be instantiated only once in the application lifecycle.
 
-The `getCachedArticles` function is will ask local database for articles of a particular category. This function is only invoked by the `getArticles` function, which is responsible for fetching the articles on the remote server.
+The `getCachedArticles` function will ask local database for articles of a particular category. This function is only invoked by the `getArticles` function, which is responsible for fetching the articles on the remote server.
+
 
 ```kotlin
 object Repository {
@@ -255,9 +253,9 @@ object Repository {
 
 ### View Model
 
-The activity or fragment lifecycle implies that both elements can be destroyed and recreated in response to user or operating system actions. Whenever the operating system decides to destroy or recreate an activity it will also destrou all data that is hold by the activity. Because all of this work must be done ina asynchronous tasks it can be painfull to create and destrou those asyncronous task regarding the activity lifecycle.
-To work around this problem, Google proposes the `ViewModel`, which recreates the lifecycle of the view component. This way the obtained data is saved by ViewModel, whichare  independent  of the component that created it.
-In this example the  ArticlesViewModel class, which inherits from the ViewModel class is responsible for obtaining  data from the repository. `switchMap` method garanties that it only access the repository when the category value is modified.
+The activity or fragment lifecycle implies that both elements can be destroyed and recreated in response to user or operating system actions. Whenever the operating system decides to destroy or recreate an activity it will also destroy all data that is hold by the activity. Because all of this must be done in an asynchronous task it can be painful to create and destroy those asynchronous tasks regarding the activity lifecycle.
+To work around this problem, Google proposes the `ViewModel`, which recreates the lifecycle of the view component. This way the obtained data is saved by `ViewModel`, which are independent of the component that created it.
+In this example the ArticlesViewModel class, which inherits from the `ViewModel` class is responsible for obtaining data from the repository. `switchMap` method guaranties that it only accesses the repository when the category value is modified.
 
 ```kotlin
 class ArticlesViewModel() : ViewModel() {
@@ -283,7 +281,7 @@ class ArticlesViewModel() : ViewModel() {
 
 ### Controller Activity/Fragment
 
-In this example it's written using fragments, but the process is similar in an Activity. The first thing we need to bind the ViewModel with the controller. After the ViewModel initializatiom it must be created an observer that references the `viewLifeCycleOwner`, which in this case represents the Fragment lifecycle. Whit this done the obsever will run whenever the `viewLifeCycleOwner` stays active.
+In this example it's written using fragments, but the process is similar in an Activity. The first thing we need to bind the ViewModel with the controller. After the ViewModel initialization it must be created an observer that references the `viewLifeCycleOwner`, which in this case represents the Fragment lifecycle. Whit this done the observer will run whenever the `viewLifeCycleOwner` stays active.
 
 ```kotlin
      private lateinit var mainActivityViewModel: ArticlesViewModel
@@ -313,7 +311,7 @@ In this example it's written using fragments, but the process is similar in an A
 iOS Architecture
 --------------------
 
-Apple still stand with [MVC](https://developer.apple.com/library/archive/documentation/General/Conceptual/DevPedia-CocoaCore/MVC.html) architecture. And the main reason is because the `UIViewController` is only destroyed when ther is no references pointing to that object. To bring this implementation closer to the Android implementation, it will also be created class repository for aggregating local data and server data.
+Apple still stand with [MVC](https://developer.apple.com/library/archive/documentation/General/Conceptual/DevPedia-CocoaCore/MVC.html) architecture. And the main reason is because the `UIViewController` is only destroyed when there is no references pointing to that object. To bring this implementation closer to the Android implementation, it will also be created class repository for aggregating local data and server data.
 
 ![iOS app arquitecture](docs/ios-architecture.png "iOS app arquitecture")
 
@@ -375,7 +373,7 @@ public class ArticleCache: NSManagedObject {
 
 ### Repository
 
-As we did in Android we will implement the repository class it's responsible to gather data from the server and store it on the local datbase withou duplicating it. When the user opens the app he will see firstly the date store on the mobile and than the data fetched from the server.
+As we did in Android, we will implement the repository class it's responsible to gather data from the server and store it on the local database without duplicating it. When the user opens the app, he will see firstly the data stored on the mobile and then the data fetched from the server.
 
 ```swift
 class Repository {
@@ -436,7 +434,7 @@ class Repository {
 
 ### Controller & Model
 
-The data binding with the controller it is now simplified. Now we can acess to the reopsitry after database context is set. And than the UI wait's for the trigger in callbak to update it self.
+The data binding with the controller it is now simplified. Now we can access to the repository after database context is set. And then the UI wait's for the trigger in callback to update itself.
 
 ```swift
 class ArticlesTVC: UITableViewController {
@@ -468,10 +466,10 @@ class ArticlesTVC: UITableViewController {
 Discussion
 ----------
 
-iOS and Android operating systems have a rich documentation that help developers to design high perfomance apps. Despite all the documentation provided, it is not always possible to find a common thread that will help programmers to find methods and good programming practices to develop what we here refer as a common application.
+iOS and Android operating systems have a rich documentation that help developers to design high performance apps. Despite all the documentation provided, it is not always possible to find a common thread that will help programmers to find methods and good programming practices to develop what we here refer as a common application.
 Furthermore, a common application will make sense if it is available on both operating systems, which exacerbates the problem of gathering all the information needed to produce good applications for both operating systems.
-Although the code is different for Android and iOS, it is possible to define a very similar base architecture when writing applications for both operating systems. The new programming languages ​​Swift and Kotlin also help, as they have many similarities, starting with the object-oriented programming paradigm, but also due to the new features of modern languages. Currently, the only big difference between both base architectures is the new MVVM proposed by Google that increases the stability level of Android applications.
-By adopting a similar base architectureas an architecture, the development and support of applications becomes simplier. Thus, the programmer can concentrate on another fundamental part, which is the development of the application's graphical interface, that should be differnt according to guide lines of each platform, providing the best user exepirence to Android and iOS users.
+Although the code is different for Android and iOS, it is possible to define a very similar base architecture when writing applications for both operating systems. The new programming languages Swift and Kotlin also help, as they have many similarities, starting with the object-oriented programming paradigm, but also due to the new features of modern languages. Currently, the only big difference between both base architectures is the new MVVM proposed by Google that increases the stability level of Android applications.
+By adopting a similar base architecture, the development and support of applications becomes simpler. Thus, the programmer can concentrate on another fundamental part, which is the development of the application's graphical interface, that should be different according to guidelines of each platform, providing the best user experience to Android and iOS users.
 
 License & copyright
 -------------------
