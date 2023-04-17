@@ -61,7 +61,7 @@ Response:
 
 To reduce the written code, we use OPENAPI to describe server requests and data models, and then generate code with Swagger for Android and iOS.
 
-This [file](main/TopNews-Android/app/src/main/java/swagger.yaml) describes the API following the [OpenAPI](https://oai.github.io) specification.
+This [file](TopNews-Android/app/src/main/java/swagger.yaml) describes the API following the [OpenAPI](https://oai.github.io) specification.
 
 Now, using [Swagger](https://swagger.io) code generator, we reduce the required API calls on Android:
 
