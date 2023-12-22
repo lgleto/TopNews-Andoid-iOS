@@ -476,6 +476,6 @@ By adopting a similar base architecture, the development and support of applicat
 License & copyright
 -------------------
 
-Copyright 2021 Lourenço Gomes
+Copyright 2020 Lourenço Gomes
 
 Licensed under [MIT License](LICENSE)

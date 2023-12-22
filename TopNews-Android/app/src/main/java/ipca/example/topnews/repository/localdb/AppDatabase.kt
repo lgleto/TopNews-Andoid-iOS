@@ -12,7 +12,7 @@ import androidx.room.RoomDatabase
 //  Copyright © 2021 Lourenço Gomes. All rights reserved.
 //
 
-@Database(entities = [ArticleCache::class], version = 2)
+@Database(entities = [ArticleCache::class], version = 4)
 abstract class AppDatabase : RoomDatabase() {
 
     abstract fun articleCacheDao(): ArticleCacheDao

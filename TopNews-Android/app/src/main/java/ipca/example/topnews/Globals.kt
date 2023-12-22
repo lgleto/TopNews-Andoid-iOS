@@ -10,7 +10,7 @@ package ipca.example.topnews
 object Globals {
 
     const val COUNTRY = "pt"
-    const val NEWS_API_KEY = "<api key here>"
+    const val NEWS_API_KEY = "1765f87e4ebc40229e80fd0f75b6416c"
     const val ENDPOINT_GENERAL  = "general"
     const val ENDPOINT_BUSINESS = "business"
     const val ENDPOINT_SCIENCE  = "science"

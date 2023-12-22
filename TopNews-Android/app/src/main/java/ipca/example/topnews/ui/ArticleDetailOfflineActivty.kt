@@ -7,8 +7,8 @@ import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.squareup.moshi.JsonAdapter
 import com.squareup.moshi.Moshi
+import io.swagger.client.models.Article
 import ipca.example.topnews.R
-import ipca.example.topnews.repository.backend.models.Article
 
 //
 //  TopNews

@@ -7,6 +7,9 @@
 
 import UIKit
 
+let ENDPOINT_NOTICIAS      = "https://pontosj.pt/ano-inaciano/feed"
+let ENDPOINT_EVENTOS       = "https://pontosj.pt/ano-inaciano/agenda/feed"
+
 class MyTabBarController: UITabBarController {
 
     override func viewDidLoad() {
@@ -14,35 +17,24 @@ class MyTabBarController: UITabBarController {
         
         if let navVC = self.viewControllers![0] as? UINavigationController {
             navVC.tabBarItem.image = UIImage.init(systemName: "newspaper")
-            navVC.tabBarItem.title = "Ultimas"
-            if let articlesTVC = navVC.children.first as? ArticlesTVC{
-                articlesTVC.category = ENDPOINT_GENERAL
-                articlesTVC.title =  "Ultimas"
+            navVC.tabBarItem.title = "Notícias"
+            if let articlesTVC = navVC.children.first as? NewsTVC{
+                articlesTVC.endpoint = ENDPOINT_NOTICIAS
+                articlesTVC.feed = "noticias"
+                articlesTVC.title =  "Notícias"
             }
         }
+        
         if let navVC = self.viewControllers![1] as? UINavigationController {
-            navVC.tabBarItem.image = UIImage.init(systemName: "chart.bar.xaxis")
-            navVC.tabBarItem.title = "Economia"
-            if let articlesTVC = navVC.children.first as? ArticlesTVC{
-                articlesTVC.category = ENDPOINT_BUSINESS
-                articlesTVC.title =  "Economia"
-            }
+            navVC.tabBarItem.image = UIImage.init(systemName: "calendar")
+            navVC.tabBarItem.title = "Agenda"
+
         }
+        
         if let navVC = self.viewControllers![2] as? UINavigationController {
-            navVC.tabBarItem.image = UIImage.init(systemName: "binoculars")
-            navVC.tabBarItem.title = "Ciência"
-            if let articlesTVC = navVC.children.first as? ArticlesTVC{
-                articlesTVC.category = ENDPOINT_SCIENCE
-                articlesTVC.title =  "Ciência"
-            }
-        }
-        if let navVC = self.viewControllers![3] as? UINavigationController {
-            navVC.tabBarItem.image = UIImage.init(systemName: "sportscourt")
-            navVC.tabBarItem.title = "Desporto"
-            if let articlesTVC = navVC.children.first as? ArticlesTVC{
-                articlesTVC.category = ENDPOINT_SPORTS
-                articlesTVC.title =  "Desporto"
-            }
+            navVC.tabBarItem.image = UIImage.init(systemName: "list.bullet")
+            navVC.tabBarItem.title = "Categorias"
+            
         }
 
     }

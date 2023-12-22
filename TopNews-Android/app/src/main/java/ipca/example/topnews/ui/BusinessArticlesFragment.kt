@@ -8,8 +8,12 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -17,7 +21,8 @@ import com.bumptech.glide.Glide
 import com.squareup.moshi.JsonAdapter
 import com.squareup.moshi.Moshi
 import ipca.example.topnews.*
-import ipca.example.topnews.repository.backend.models.Article
+import io.swagger.client.models.Article
+import kotlinx.coroutines.launch
 
 
 //
@@ -30,13 +35,10 @@ import ipca.example.topnews.repository.backend.models.Article
 
 class BusinessArticlesFragment : Fragment() {
 
-    private lateinit var mainActivityViewModel: ArticlesViewModel
-
     private var articles : List<Article> = arrayListOf()
 
     private var mAdapter: RecyclerView.Adapter<*>? = null
     private var mLayoutManager: LinearLayoutManager? = null
-
 
     override fun onCreateView(
             inflater: LayoutInflater,
@@ -58,22 +60,22 @@ class BusinessArticlesFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        mainActivityViewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory())
-            .get(ArticlesViewModel::class.java)
-        mainActivityViewModel.articlesForCategory.observe(viewLifecycleOwner, Observer { totalArticlesCached->
-            totalArticlesCached?.let { fetchedArticles ->
-                fetchedArticles.articles?.let { articlesList ->
-                    articles = articlesList.sortedByDescending {
-                        it.publishedAt
+
+        val viewModel: ArticlesWithCacheViewModel by viewModels {
+            ArticlesWithCacheViewModelFactory(requireContext(), Globals.COUNTRY, Globals.ENDPOINT_BUSINESS)
+        }
+        viewLifecycleOwner.lifecycleScope.launch {
+            repeatOnLifecycle(Lifecycle.State.STARTED) {
+                viewModel.uiState.collect { uiState ->
+                    uiState.articles?.articles?.let { articlesList ->
+                        articles = articlesList.sortedByDescending {
+                            it.publishedAt
+                        }
+                        mAdapter?.notifyDataSetChanged()
                     }
-                    mAdapter?.notifyDataSetChanged()
                 }
             }
-        })
-
-        mainActivityViewModel.setCategory(Globals.ENDPOINT_BUSINESS, requireContext())
-
-
+        }
     }
 
     inner class RecyclerViewArticlesAdapter : RecyclerView.Adapter<RecyclerViewArticlesAdapter.ViewHolder>() {

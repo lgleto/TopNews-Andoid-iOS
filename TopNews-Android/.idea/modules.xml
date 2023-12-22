@@ -4,6 +4,12 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/TopNews.iml" filepath="$PROJECT_DIR$/.idea/modules/TopNews.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/TopNews.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/TopNews.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/TopNews.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/TopNews.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/TopNews.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/TopNews.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/TopNews.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/TopNews.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kotlin-client/TopNews.kotlin-client.iml" filepath="$PROJECT_DIR$/.idea/modules/kotlin-client/TopNews.kotlin-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kotlin-client/TopNews.kotlin-client.main.iml" filepath="$PROJECT_DIR$/.idea/modules/kotlin-client/TopNews.kotlin-client.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kotlin-client/TopNews.kotlin-client.test.iml" filepath="$PROJECT_DIR$/.idea/modules/kotlin-client/TopNews.kotlin-client.test.iml" />
     </modules>
   </component>
 </project>
