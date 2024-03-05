@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="Gradle: androidx.activity:activity:1.8.0@aar">
+  <library name="Gradle: androidx.activity:activity:1.8.0@aar" external-system-id="GRADLE">
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/0f373a584fdfddff44ccd590ceeaf254/transformed/jetified-activity-1.8.0/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/0f373a584fdfddff44ccd590ceeaf254/transformed/jetified-activity-1.8.0/AndroidManifest.xml" />

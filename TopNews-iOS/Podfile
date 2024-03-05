@@ -16,5 +16,12 @@ target 'TopNews' do
   target 'TopNewsUITests' do
     # Pods for testing
   end
+  
+  target 'TopNewsWatch Watch App' do
+    # Pods for TopNewsWatch Watch App
+    pod 'SwaggerClient', :path => './swagger-ios'
+  end
 
 end
+
+

@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="Gradle: org.javassist:javassist:3.21.0-GA">
+  <library name="Gradle: org.javassist:javassist:3.21.0-GA" external-system-id="GRADLE">
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.javassist/javassist/3.21.0-GA/598244f595db5c5fb713731eddbb1c91a58d959b/javassist-3.21.0-GA.jar!/" />
     </CLASSES>

@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="Gradle: com.squareup.moshi:moshi-adapters:1.11.0">
+  <library name="Gradle: com.squareup.moshi:moshi-adapters:1.11.0" external-system-id="GRADLE">
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.moshi/moshi-adapters/1.11.0/eedae4dc0fe61e4228edc6b19d622b00d6850e3d/moshi-adapters-1.11.0.jar!/" />
     </CLASSES>

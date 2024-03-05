@@ -9,17 +9,16 @@ import Foundation
 import Alamofire
 
 
-
 open class NewsAPI {
     /**
 
+     - parameter apiKey: (query)  
      - parameter country: (query)  (optional)
      - parameter category: (query)  (optional)
-     - parameter apiKey: (query)  (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func topHeadlinesGet(country: String? = nil, category: String? = nil, apiKey: String? = nil, completion: @escaping ((_ data: Articles?,_ error: Error?) -> Void)) {
-        topHeadlinesGetWithRequestBuilder(country: country, category: category, apiKey: apiKey).execute { (response, error) -> Void in
+    open class func topHeadlinesGet(apiKey: String, country: String? = nil, category: String? = nil, completion: @escaping ((_ data: Articles?,_ error: Error?) -> Void)) {
+        topHeadlinesGetWithRequestBuilder(apiKey: apiKey, country: country, category: category).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
     }
@@ -27,7 +26,10 @@ open class NewsAPI {
 
     /**
      - GET /top-headlines
-     - Get user playlists
+
+     - API Key:
+       - type: apiKey apiKey (QUERY)
+       - name: ApiKeyAuth
      - examples: [{contentType=application/json, example={
   "totalResults" : 0,
   "articles" : [ {
@@ -35,11 +37,11 @@ open class NewsAPI {
     "author" : "author",
     "urlToImage" : "urlToImage",
     "description" : "description",
-    "source" : {
+    "title" : "title",
+    "user" : {
       "name" : "name",
       "id" : "id"
     },
-    "title" : "title",
     "url" : "url",
     "content" : "content"
   }, {
@@ -47,28 +49,25 @@ open class NewsAPI {
     "author" : "author",
     "urlToImage" : "urlToImage",
     "description" : "description",
-    "source" : {
+    "title" : "title",
+    "user" : {
       "name" : "name",
       "id" : "id"
     },
-    "title" : "title",
     "url" : "url",
     "content" : "content"
   } ],
   "status" : "status"
 }}]
-     
      - parameter country: (query)  (optional)
      - parameter category: (query)  (optional)
-     - parameter apiKey: (query)  (optional)
 
      - returns: RequestBuilder<Articles> 
      */
-    open class func topHeadlinesGetWithRequestBuilder(country: String? = nil, category: String? = nil, apiKey: String? = nil) -> RequestBuilder<Articles> {
+    open class func topHeadlinesGetWithRequestBuilder(apiKey: String, country: String? = nil, category: String? = nil) -> RequestBuilder<Articles> {
         let path = "/top-headlines"
         let URLString = SwaggerClientAPI.basePath + path
         let parameters: [String:Any]? = nil
-        
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
             "country": country, 
@@ -76,9 +75,9 @@ open class NewsAPI {
             "apiKey": apiKey
         ])
 
+
         let requestBuilder: RequestBuilder<Articles>.Type = SwaggerClientAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
-
 }

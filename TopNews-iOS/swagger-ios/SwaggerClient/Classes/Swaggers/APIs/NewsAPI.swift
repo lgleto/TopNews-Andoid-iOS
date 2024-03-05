@@ -9,7 +9,6 @@ import Foundation
 import Alamofire
 
 
-
 open class NewsAPI {
     /**
 
@@ -27,10 +26,10 @@ open class NewsAPI {
 
     /**
      - GET /top-headlines
-     - Get user playlists
+
      - API Key:
        - type: apiKey apiKey (QUERY)
-       - name: APIKeyQueryParam
+       - name: ApiKeyAuth
      - examples: [{contentType=application/json, example={
   "totalResults" : 0,
   "articles" : [ {
@@ -60,8 +59,6 @@ open class NewsAPI {
   } ],
   "status" : "status"
 }}]
-     
-     - parameter apiKey: (query)  
      - parameter country: (query)  (optional)
      - parameter category: (query)  (optional)
 
@@ -71,7 +68,6 @@ open class NewsAPI {
         let path = "/top-headlines"
         let URLString = SwaggerClientAPI.basePath + path
         let parameters: [String:Any]? = nil
-        
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
             "country": country, 
@@ -79,9 +75,9 @@ open class NewsAPI {
             "apiKey": apiKey
         ])
 
+
         let requestBuilder: RequestBuilder<Articles>.Type = SwaggerClientAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
-
 }

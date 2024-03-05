@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		384305131896544DBFCA2179 /* Pods_TopNews_TopNewsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9001E447A0635099AEE31D2 /* Pods_TopNews_TopNewsUITests.framework */; };
-		4FA4E1D994F296CEB41CBB02 /* Pods_TopNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE934A882CC5B9C32EB18DD /* Pods_TopNews.framework */; };
+		03CEA8559A1372F483558007 /* Pods_TopNews_TopNewsWatch_Watch_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7B872AFF2E6D9A33FD35E70 /* Pods_TopNews_TopNewsWatch_Watch_App.framework */; };
+		1244D24592D71902CA6F5A17 /* Pods_TopNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CAA37EE2B7CCF8B00CB6E93 /* Pods_TopNews.framework */; };
+		33F331BBA1D95FD3634B3AEF /* Pods_TopNewsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 319426E86FBC9053DA7F9C5F /* Pods_TopNewsTests.framework */; };
 		6C01941E2638BB01002B8F64 /* ArticleTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C01941D2638BB01002B8F64 /* ArticleTVCell.swift */; };
 		6C0194202638C452002B8F64 /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C01941F2638C452002B8F64 /* MyTabBarController.swift */; };
 		6C0194222638C623002B8F64 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0194212638C623002B8F64 /* Globals.swift */; };
@@ -27,8 +28,17 @@
 		6C37C9B2260EABF10019ECDD /* ArticlesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C37C9B1260EABF10019ECDD /* ArticlesTVC.swift */; };
 		6C8F2568260FBDBF0061712A /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8F2567260FBDBF0061712A /* Helpers.swift */; };
 		6C8F256D260FC66D0061712A /* AtricleDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8F256C260FC66D0061712A /* AtricleDetailVC.swift */; };
+		6CAA37D62B7CCB3E00CB6E93 /* TopNewsWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 6CAA37D52B7CCB3E00CB6E93 /* TopNewsWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6CAA37DB2B7CCB3E00CB6E93 /* TopNewsWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA37DA2B7CCB3E00CB6E93 /* TopNewsWatchApp.swift */; };
+		6CAA37DD2B7CCB3E00CB6E93 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA37DC2B7CCB3E00CB6E93 /* ContentView.swift */; };
+		6CAA37DF2B7CCB4000CB6E93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CAA37DE2B7CCB4000CB6E93 /* Assets.xcassets */; };
+		6CAA37E22B7CCB4000CB6E93 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CAA37E12B7CCB4000CB6E93 /* Preview Assets.xcassets */; };
+		6CAA37F12B7CCFDD00CB6E93 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE476D92677A739009FEECE /* Repository.swift */; };
+		6CAA37F22B7CD2AC00CB6E93 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0194212638C623002B8F64 /* Globals.swift */; };
+		6CAA37F32B7CD44B00CB6E93 /* Pods_TopNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E57807D98AD0BCA014B23898 /* Pods_TopNews.framework */; };
 		6CE476DA2677A739009FEECE /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE476D92677A739009FEECE /* Repository.swift */; };
-		8E68F7BD2F8FABA9E96A9DD3 /* Pods_TopNewsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 975B73B22D33970A858EE1D6 /* Pods_TopNewsTests.framework */; };
+		D69272CF46547A459BC76132 /* Pods_TopNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E57807D98AD0BCA014B23898 /* Pods_TopNews.framework */; };
+		F21C73BD6478155E12D2E174 /* Pods_TopNews_TopNewsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E3610EC6ECAF7F5559B6AC9 /* Pods_TopNews_TopNewsUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,10 +56,37 @@
 			remoteGlobalIDString = 6C37C96C260EA9DC0019ECDD;
 			remoteInfo = TopNews;
 		};
+		6CAA37D72B7CCB3E00CB6E93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C37C965260EA9DC0019ECDD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6CAA37D42B7CCB3E00CB6E93;
+			remoteInfo = "TopNewsWatch Watch App";
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		6CAA37E52B7CCB4000CB6E93 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				6CAA37D62B7CCB3E00CB6E93 /* TopNewsWatch Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		6474224B190090F1E5450359 /* Pods-TopNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopNews.release.xcconfig"; path = "Target Support Files/Pods-TopNews/Pods-TopNews.release.xcconfig"; sourceTree = "<group>"; };
+		196CC4CA494C71BC367F2026 /* Pods_TopNewsWatch_Watch_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TopNewsWatch_Watch_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EDCBB34C0BC2B4FB0C019F4 /* Pods-TopNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopNews.debug.xcconfig"; path = "Target Support Files/Pods-TopNews/Pods-TopNews.debug.xcconfig"; sourceTree = "<group>"; };
+		319426E86FBC9053DA7F9C5F /* Pods_TopNewsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TopNewsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		415B298931BC13E67B4BC06B /* Pods-TopNews-TopNewsWatch Watch App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopNews-TopNewsWatch Watch App.release.xcconfig"; path = "Target Support Files/Pods-TopNews-TopNewsWatch Watch App/Pods-TopNews-TopNewsWatch Watch App.release.xcconfig"; sourceTree = "<group>"; };
+		4E3610EC6ECAF7F5559B6AC9 /* Pods_TopNews_TopNewsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TopNews_TopNewsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EEF4F19CFF54079048428BE /* Pods-TopNews-TopNewsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopNews-TopNewsUITests.debug.xcconfig"; path = "Target Support Files/Pods-TopNews-TopNewsUITests/Pods-TopNews-TopNewsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6321108443B719EC4AB555F1 /* Pods-TopNewsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopNewsTests.debug.xcconfig"; path = "Target Support Files/Pods-TopNewsTests/Pods-TopNewsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6C01941D2638BB01002B8F64 /* ArticleTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTVCell.swift; sourceTree = "<group>"; };
 		6C01941F2638C452002B8F64 /* MyTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabBarController.swift; sourceTree = "<group>"; };
 		6C0194212638C623002B8F64 /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
@@ -74,15 +111,22 @@
 		6C37C9B1260EABF10019ECDD /* ArticlesTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesTVC.swift; sourceTree = "<group>"; };
 		6C8F2567260FBDBF0061712A /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		6C8F256C260FC66D0061712A /* AtricleDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtricleDetailVC.swift; sourceTree = "<group>"; };
+		6CAA37D02B7CCB3D00CB6E93 /* TopNewsWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopNewsWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CAA37D52B7CCB3E00CB6E93 /* TopNewsWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TopNewsWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CAA37DA2B7CCB3E00CB6E93 /* TopNewsWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNewsWatchApp.swift; sourceTree = "<group>"; };
+		6CAA37DC2B7CCB3E00CB6E93 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6CAA37DE2B7CCB4000CB6E93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6CAA37E12B7CCB4000CB6E93 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6CAA37EE2B7CCF8B00CB6E93 /* Pods_TopNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_TopNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CE476D92677A739009FEECE /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
-		8611C46BF44B7AC94E5DC02B /* Pods-TopNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopNews.debug.xcconfig"; path = "Target Support Files/Pods-TopNews/Pods-TopNews.debug.xcconfig"; sourceTree = "<group>"; };
-		975B73B22D33970A858EE1D6 /* Pods_TopNewsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TopNewsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B9001E447A0635099AEE31D2 /* Pods_TopNews_TopNewsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TopNews_TopNewsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CBE934A882CC5B9C32EB18DD /* Pods_TopNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TopNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D1F92E1796B3F34C7604B985 /* Pods-TopNews-TopNewsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopNews-TopNewsUITests.debug.xcconfig"; path = "Target Support Files/Pods-TopNews-TopNewsUITests/Pods-TopNews-TopNewsUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		D385CD82EDFB0521D2E8C7D5 /* Pods-TopNewsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopNewsTests.debug.xcconfig"; path = "Target Support Files/Pods-TopNewsTests/Pods-TopNewsTests.debug.xcconfig"; sourceTree = "<group>"; };
-		DBD996E388BE0C7FDDC03DF7 /* Pods-TopNewsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopNewsTests.release.xcconfig"; path = "Target Support Files/Pods-TopNewsTests/Pods-TopNewsTests.release.xcconfig"; sourceTree = "<group>"; };
-		F6BA413F5EB4C61B65B189DA /* Pods-TopNews-TopNewsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopNews-TopNewsUITests.release.xcconfig"; path = "Target Support Files/Pods-TopNews-TopNewsUITests/Pods-TopNews-TopNewsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		71A0A97A435BAFE33F4CC366 /* Pods-TopNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopNews.release.xcconfig"; path = "Target Support Files/Pods-TopNews/Pods-TopNews.release.xcconfig"; sourceTree = "<group>"; };
+		79B0A1BD6CBAF114B6D8F30C /* Pods-TopNews-TopNewsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopNews-TopNewsUITests.release.xcconfig"; path = "Target Support Files/Pods-TopNews-TopNewsUITests/Pods-TopNews-TopNewsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		918D32D7E0996CCB483FC10D /* Pods-TopNewsWatch Watch App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopNewsWatch Watch App.debug.xcconfig"; path = "Target Support Files/Pods-TopNewsWatch Watch App/Pods-TopNewsWatch Watch App.debug.xcconfig"; sourceTree = "<group>"; };
+		AD111A0A9DDC220555A8BC3E /* Pods-TopNewsWatch Watch App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopNewsWatch Watch App.release.xcconfig"; path = "Target Support Files/Pods-TopNewsWatch Watch App/Pods-TopNewsWatch Watch App.release.xcconfig"; sourceTree = "<group>"; };
+		AF14D9465C62671AA32A986A /* Pods-TopNewsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopNewsTests.release.xcconfig"; path = "Target Support Files/Pods-TopNewsTests/Pods-TopNewsTests.release.xcconfig"; sourceTree = "<group>"; };
+		CCE7DCF177784EC0D4CCEB3A /* Pods-TopNews-TopNewsWatch Watch App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopNews-TopNewsWatch Watch App.debug.xcconfig"; path = "Target Support Files/Pods-TopNews-TopNewsWatch Watch App/Pods-TopNews-TopNewsWatch Watch App.debug.xcconfig"; sourceTree = "<group>"; };
+		E57807D98AD0BCA014B23898 /* Pods_TopNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TopNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7B872AFF2E6D9A33FD35E70 /* Pods_TopNews_TopNewsWatch_Watch_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TopNews_TopNewsWatch_Watch_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +134,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FA4E1D994F296CEB41CBB02 /* Pods_TopNews.framework in Frameworks */,
+				D69272CF46547A459BC76132 /* Pods_TopNews.framework in Frameworks */,
+				1244D24592D71902CA6F5A17 /* Pods_TopNews.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,7 +143,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E68F7BD2F8FABA9E96A9DD3 /* Pods_TopNewsTests.framework in Frameworks */,
+				33F331BBA1D95FD3634B3AEF /* Pods_TopNewsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,19 +151,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				384305131896544DBFCA2179 /* Pods_TopNews_TopNewsUITests.framework in Frameworks */,
+				F21C73BD6478155E12D2E174 /* Pods_TopNews_TopNewsUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CAA37D22B7CCB3E00CB6E93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03CEA8559A1372F483558007 /* Pods_TopNews_TopNewsWatch_Watch_App.framework in Frameworks */,
+				6CAA37F32B7CD44B00CB6E93 /* Pods_TopNews.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		44043A51A783D7E8AFF6440B /* Frameworks */ = {
+		62E3CD23185E1C84F1180EAB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CBE934A882CC5B9C32EB18DD /* Pods_TopNews.framework */,
-				B9001E447A0635099AEE31D2 /* Pods_TopNews_TopNewsUITests.framework */,
-				975B73B22D33970A858EE1D6 /* Pods_TopNewsTests.framework */,
+				6CAA37EE2B7CCF8B00CB6E93 /* Pods_TopNews.framework */,
+				E57807D98AD0BCA014B23898 /* Pods_TopNews.framework */,
+				4E3610EC6ECAF7F5559B6AC9 /* Pods_TopNews_TopNewsUITests.framework */,
+				319426E86FBC9053DA7F9C5F /* Pods_TopNewsTests.framework */,
+				196CC4CA494C71BC367F2026 /* Pods_TopNewsWatch_Watch_App.framework */,
+				F7B872AFF2E6D9A33FD35E70 /* Pods_TopNews_TopNewsWatch_Watch_App.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -160,9 +217,10 @@
 				6C37C96F260EA9DC0019ECDD /* TopNews */,
 				6C37C989260EA9DD0019ECDD /* TopNewsTests */,
 				6C37C994260EA9DD0019ECDD /* TopNewsUITests */,
+				6CAA37D92B7CCB3E00CB6E93 /* TopNewsWatch Watch App */,
 				6C37C96E260EA9DC0019ECDD /* Products */,
 				FAC80852AD637045F3BD180B /* Pods */,
-				44043A51A783D7E8AFF6440B /* Frameworks */,
+				62E3CD23185E1C84F1180EAB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -172,6 +230,8 @@
 				6C37C96D260EA9DC0019ECDD /* TopNews.app */,
 				6C37C986260EA9DD0019ECDD /* TopNewsTests.xctest */,
 				6C37C991260EA9DD0019ECDD /* TopNewsUITests.xctest */,
+				6CAA37D02B7CCB3D00CB6E93 /* TopNewsWatch.app */,
+				6CAA37D52B7CCB3E00CB6E93 /* TopNewsWatch Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -212,15 +272,38 @@
 			path = TopNewsUITests;
 			sourceTree = "<group>";
 		};
+		6CAA37D92B7CCB3E00CB6E93 /* TopNewsWatch Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				6CAA37DA2B7CCB3E00CB6E93 /* TopNewsWatchApp.swift */,
+				6CAA37DC2B7CCB3E00CB6E93 /* ContentView.swift */,
+				6CAA37DE2B7CCB4000CB6E93 /* Assets.xcassets */,
+				6CAA37E02B7CCB4000CB6E93 /* Preview Content */,
+			);
+			path = "TopNewsWatch Watch App";
+			sourceTree = "<group>";
+		};
+		6CAA37E02B7CCB4000CB6E93 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				6CAA37E12B7CCB4000CB6E93 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		FAC80852AD637045F3BD180B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8611C46BF44B7AC94E5DC02B /* Pods-TopNews.debug.xcconfig */,
-				6474224B190090F1E5450359 /* Pods-TopNews.release.xcconfig */,
-				D1F92E1796B3F34C7604B985 /* Pods-TopNews-TopNewsUITests.debug.xcconfig */,
-				F6BA413F5EB4C61B65B189DA /* Pods-TopNews-TopNewsUITests.release.xcconfig */,
-				D385CD82EDFB0521D2E8C7D5 /* Pods-TopNewsTests.debug.xcconfig */,
-				DBD996E388BE0C7FDDC03DF7 /* Pods-TopNewsTests.release.xcconfig */,
+				2EDCBB34C0BC2B4FB0C019F4 /* Pods-TopNews.debug.xcconfig */,
+				71A0A97A435BAFE33F4CC366 /* Pods-TopNews.release.xcconfig */,
+				5EEF4F19CFF54079048428BE /* Pods-TopNews-TopNewsUITests.debug.xcconfig */,
+				79B0A1BD6CBAF114B6D8F30C /* Pods-TopNews-TopNewsUITests.release.xcconfig */,
+				6321108443B719EC4AB555F1 /* Pods-TopNewsTests.debug.xcconfig */,
+				AF14D9465C62671AA32A986A /* Pods-TopNewsTests.release.xcconfig */,
+				918D32D7E0996CCB483FC10D /* Pods-TopNewsWatch Watch App.debug.xcconfig */,
+				AD111A0A9DDC220555A8BC3E /* Pods-TopNewsWatch Watch App.release.xcconfig */,
+				CCE7DCF177784EC0D4CCEB3A /* Pods-TopNews-TopNewsWatch Watch App.debug.xcconfig */,
+				415B298931BC13E67B4BC06B /* Pods-TopNews-TopNewsWatch Watch App.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -232,11 +315,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6C37C99A260EA9DD0019ECDD /* Build configuration list for PBXNativeTarget "TopNews" */;
 			buildPhases = (
-				277508A279385B0BAE581D58 /* [CP] Check Pods Manifest.lock */,
+				76DE8A95ADE495C170617C36 /* [CP] Check Pods Manifest.lock */,
 				6C37C969260EA9DC0019ECDD /* Sources */,
 				6C37C96A260EA9DC0019ECDD /* Frameworks */,
 				6C37C96B260EA9DC0019ECDD /* Resources */,
-				EF9382C654E52440AB710C3F /* [CP] Embed Pods Frameworks */,
+				1321EFE468CB0E0AD2606F2F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -251,7 +334,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6C37C99D260EA9DD0019ECDD /* Build configuration list for PBXNativeTarget "TopNewsTests" */;
 			buildPhases = (
-				3483E34147AAC614B32AE955 /* [CP] Check Pods Manifest.lock */,
+				7425CE9F5A099EB15D0825F4 /* [CP] Check Pods Manifest.lock */,
 				6C37C982260EA9DD0019ECDD /* Sources */,
 				6C37C983260EA9DD0019ECDD /* Frameworks */,
 				6C37C984260EA9DD0019ECDD /* Resources */,
@@ -270,11 +353,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6C37C9A0260EA9DD0019ECDD /* Build configuration list for PBXNativeTarget "TopNewsUITests" */;
 			buildPhases = (
-				682C3B08EB0D0FABA923FB42 /* [CP] Check Pods Manifest.lock */,
+				90706BAC4EE269578BF4E34A /* [CP] Check Pods Manifest.lock */,
 				6C37C98D260EA9DD0019ECDD /* Sources */,
 				6C37C98E260EA9DD0019ECDD /* Frameworks */,
 				6C37C98F260EA9DD0019ECDD /* Resources */,
-				8670B1816C0A9307304444F0 /* [CP] Embed Pods Frameworks */,
+				8F262A660344BEF8CE597E5E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -286,13 +369,49 @@
 			productReference = 6C37C991260EA9DD0019ECDD /* TopNewsUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		6CAA37CF2B7CCB3D00CB6E93 /* TopNewsWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6CAA37E92B7CCB4000CB6E93 /* Build configuration list for PBXNativeTarget "TopNewsWatch" */;
+			buildPhases = (
+				6CAA37CE2B7CCB3D00CB6E93 /* Resources */,
+				6CAA37E52B7CCB4000CB6E93 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6CAA37D82B7CCB3E00CB6E93 /* PBXTargetDependency */,
+			);
+			name = TopNewsWatch;
+			productName = TopNewsWatch;
+			productReference = 6CAA37D02B7CCB3D00CB6E93 /* TopNewsWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		6CAA37D42B7CCB3E00CB6E93 /* TopNewsWatch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6CAA37E82B7CCB4000CB6E93 /* Build configuration list for PBXNativeTarget "TopNewsWatch Watch App" */;
+			buildPhases = (
+				050607B224394A25439314AD /* [CP] Check Pods Manifest.lock */,
+				6CAA37D12B7CCB3E00CB6E93 /* Sources */,
+				6CAA37D22B7CCB3E00CB6E93 /* Frameworks */,
+				6CAA37D32B7CCB3E00CB6E93 /* Resources */,
+				17AF52DF63ADBE1C66EC01AB /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TopNewsWatch Watch App";
+			productName = "TopNewsWatch Watch App";
+			productReference = 6CAA37D52B7CCB3E00CB6E93 /* TopNewsWatch Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		6C37C965260EA9DC0019ECDD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1240;
+				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					6C37C96C260EA9DC0019ECDD = {
@@ -305,6 +424,12 @@
 					6C37C990260EA9DD0019ECDD = {
 						CreatedOnToolsVersion = 12.4;
 						TestTargetID = 6C37C96C260EA9DC0019ECDD;
+					};
+					6CAA37CF2B7CCB3D00CB6E93 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					6CAA37D42B7CCB3E00CB6E93 = {
+						CreatedOnToolsVersion = 15.2;
 					};
 				};
 			};
@@ -324,6 +449,8 @@
 				6C37C96C260EA9DC0019ECDD /* TopNews */,
 				6C37C985260EA9DD0019ECDD /* TopNewsTests */,
 				6C37C990260EA9DD0019ECDD /* TopNewsUITests */,
+				6CAA37CF2B7CCB3D00CB6E93 /* TopNewsWatch */,
+				6CAA37D42B7CCB3E00CB6E93 /* TopNewsWatch Watch App */,
 			);
 		};
 /* End PBXProject section */
@@ -353,10 +480,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6CAA37CE2B7CCB3D00CB6E93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CAA37D32B7CCB3E00CB6E93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CAA37E22B7CCB4000CB6E93 /* Preview Assets.xcassets in Resources */,
+				6CAA37DF2B7CCB4000CB6E93 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		277508A279385B0BAE581D58 /* [CP] Check Pods Manifest.lock */ = {
+		050607B224394A25439314AD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -371,14 +514,48 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TopNews-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-TopNews-TopNewsWatch Watch App-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3483E34147AAC614B32AE955 /* [CP] Check Pods Manifest.lock */ = {
+		1321EFE468CB0E0AD2606F2F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TopNews/Pods-TopNews-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TopNews/Pods-TopNews-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TopNews/Pods-TopNews-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		17AF52DF63ADBE1C66EC01AB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TopNews-TopNewsWatch Watch App/Pods-TopNews-TopNewsWatch Watch App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TopNews-TopNewsWatch Watch App/Pods-TopNews-TopNewsWatch Watch App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TopNews-TopNewsWatch Watch App/Pods-TopNews-TopNewsWatch Watch App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7425CE9F5A099EB15D0825F4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -400,7 +577,46 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		682C3B08EB0D0FABA923FB42 /* [CP] Check Pods Manifest.lock */ = {
+		76DE8A95ADE495C170617C36 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TopNews-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F262A660344BEF8CE597E5E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TopNews-TopNewsUITests/Pods-TopNews-TopNewsUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TopNews-TopNewsUITests/Pods-TopNews-TopNewsUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TopNews-TopNewsUITests/Pods-TopNews-TopNewsUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90706BAC4EE269578BF4E34A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -420,40 +636,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8670B1816C0A9307304444F0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TopNews-TopNewsUITests/Pods-TopNews-TopNewsUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TopNews-TopNewsUITests/Pods-TopNews-TopNewsUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TopNews-TopNewsUITests/Pods-TopNews-TopNewsUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EF9382C654E52440AB710C3F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TopNews/Pods-TopNews-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TopNews/Pods-TopNews-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TopNews/Pods-TopNews-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -496,6 +678,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6CAA37D12B7CCB3E00CB6E93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CAA37F22B7CD2AC00CB6E93 /* Globals.swift in Sources */,
+				6CAA37DD2B7CCB3E00CB6E93 /* ContentView.swift in Sources */,
+				6CAA37DB2B7CCB3E00CB6E93 /* TopNewsWatchApp.swift in Sources */,
+				6CAA37F12B7CCFDD00CB6E93 /* Repository.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -508,6 +701,11 @@
 			isa = PBXTargetDependency;
 			target = 6C37C96C260EA9DC0019ECDD /* TopNews */;
 			targetProxy = 6C37C992260EA9DD0019ECDD /* PBXContainerItemProxy */;
+		};
+		6CAA37D82B7CCB3E00CB6E93 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6CAA37D42B7CCB3E00CB6E93 /* TopNewsWatch Watch App */;
+			targetProxy = 6CAA37D72B7CCB3E00CB6E93 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -649,7 +847,7 @@
 		};
 		6C37C99B260EA9DD0019ECDD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8611C46BF44B7AC94E5DC02B /* Pods-TopNews.debug.xcconfig */;
+			baseConfigurationReference = 2EDCBB34C0BC2B4FB0C019F4 /* Pods-TopNews.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -669,7 +867,7 @@
 		};
 		6C37C99C260EA9DD0019ECDD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6474224B190090F1E5450359 /* Pods-TopNews.release.xcconfig */;
+			baseConfigurationReference = 71A0A97A435BAFE33F4CC366 /* Pods-TopNews.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -689,7 +887,7 @@
 		};
 		6C37C99E260EA9DD0019ECDD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D385CD82EDFB0521D2E8C7D5 /* Pods-TopNewsTests.debug.xcconfig */;
+			baseConfigurationReference = 6321108443B719EC4AB555F1 /* Pods-TopNewsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -712,7 +910,7 @@
 		};
 		6C37C99F260EA9DD0019ECDD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DBD996E388BE0C7FDDC03DF7 /* Pods-TopNewsTests.release.xcconfig */;
+			baseConfigurationReference = AF14D9465C62671AA32A986A /* Pods-TopNewsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -735,7 +933,7 @@
 		};
 		6C37C9A1260EA9DD0019ECDD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D1F92E1796B3F34C7604B985 /* Pods-TopNews-TopNewsUITests.debug.xcconfig */;
+			baseConfigurationReference = 5EEF4F19CFF54079048428BE /* Pods-TopNews-TopNewsUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -756,7 +954,7 @@
 		};
 		6C37C9A2260EA9DD0019ECDD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F6BA413F5EB4C61B65B189DA /* Pods-TopNews-TopNewsUITests.release.xcconfig */;
+			baseConfigurationReference = 79B0A1BD6CBAF114B6D8F30C /* Pods-TopNews-TopNewsUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -772,6 +970,120 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = TopNews;
+			};
+			name = Release;
+		};
+		6CAA37E32B7CCB4000CB6E93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9Q7979SJQW;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				INFOPLIST_KEY_CFBundleDisplayName = TopNewsWatch;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = osga.home.TopNewsWatch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		6CAA37E42B7CCB4000CB6E93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9Q7979SJQW;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				INFOPLIST_KEY_CFBundleDisplayName = TopNewsWatch;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = osga.home.TopNewsWatch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		6CAA37E62B7CCB4000CB6E93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCE7DCF177784EC0D4CCEB3A /* Pods-TopNews-TopNewsWatch Watch App.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TopNewsWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 9Q7979SJQW;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = TopNewsWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = osga.home.TopNewsWatch.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Debug;
+		};
+		6CAA37E72B7CCB4000CB6E93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 415B298931BC13E67B4BC06B /* Pods-TopNews-TopNewsWatch Watch App.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TopNewsWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 9Q7979SJQW;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = TopNewsWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = osga.home.TopNewsWatch.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.2;
 			};
 			name = Release;
 		};
@@ -810,6 +1122,24 @@
 			buildConfigurations = (
 				6C37C9A1260EA9DD0019ECDD /* Debug */,
 				6C37C9A2260EA9DD0019ECDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6CAA37E82B7CCB4000CB6E93 /* Build configuration list for PBXNativeTarget "TopNewsWatch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CAA37E62B7CCB4000CB6E93 /* Debug */,
+				6CAA37E72B7CCB4000CB6E93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6CAA37E92B7CCB4000CB6E93 /* Build configuration list for PBXNativeTarget "TopNewsWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CAA37E32B7CCB4000CB6E93 /* Debug */,
+				6CAA37E42B7CCB4000CB6E93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

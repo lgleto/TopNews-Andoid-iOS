@@ -7,7 +7,7 @@
 
 import Foundation
 
-let COUNTRY = "pt"
+let COUNTRY = "us"
 let NEWS_API_KEY = "1765f87e4ebc40229e80fd0f75b6416c"
 let ENDPOINT_GENERAL  = "general"
 let ENDPOINT_BUSINESS = "business"

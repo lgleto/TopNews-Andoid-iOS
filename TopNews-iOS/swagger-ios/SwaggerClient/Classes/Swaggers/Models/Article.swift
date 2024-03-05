@@ -20,7 +20,7 @@ public struct Article: Codable {
     public var publishedAt: String?
     public var content: String?
 
-    public init(user: Source?, author: String?, title: String?, _description: String?, url: String?, urlToImage: String?, publishedAt: String?, content: String?) {
+    public init(user: Source? = nil, author: String? = nil, title: String? = nil, _description: String? = nil, url: String? = nil, urlToImage: String? = nil, publishedAt: String? = nil, content: String? = nil) {
         self.user = user
         self.author = author
         self.title = title
@@ -42,6 +42,4 @@ public struct Article: Codable {
         case content
     }
 
-
 }
-
