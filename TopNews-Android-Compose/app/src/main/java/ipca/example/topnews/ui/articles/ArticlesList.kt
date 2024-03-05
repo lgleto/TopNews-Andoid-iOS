@@ -67,7 +67,6 @@ import ipca.example.topnews.ui.theme.TopNewsTheme
                 }
             }
         }
-
     }
 }
 

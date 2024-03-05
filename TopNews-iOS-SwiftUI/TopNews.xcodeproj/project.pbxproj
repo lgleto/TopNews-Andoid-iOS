@@ -57,6 +57,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C039E0B2B97411400C13679 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				6C58071C2B972B4000ADDAF9 /* ArticleCache.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		6C039E0C2B97412400C13679 /* repository */ = {
+			isa = PBXGroup;
+			children = (
+				6C5807182B972A3B00ADDAF9 /* Repository.swift */,
+			);
+			path = repository;
+			sourceTree = "<group>";
+		};
+		6C039E0D2B97413300C13679 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				6C5807202B972C3300ADDAF9 /* ContentView.swift */,
+				6C5807032B95E5E300ADDAF9 /* ArticlesViewModel.swift */,
+				6C5807012B95E22C00ADDAF9 /* ArticlesView.swift */,
+				6C5807222B972F5E00ADDAF9 /* ArticlesCachedView.swift */,
+				6C5807072B96288200ADDAF9 /* ArticleDetailView.swift */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
 		6C5806E22B95E07F00ADDAF9 = {
 			isa = PBXGroup;
 			children = (
@@ -78,15 +106,11 @@
 		6C5806ED2B95E07F00ADDAF9 /* TopNews */ = {
 			isa = PBXGroup;
 			children = (
-				6C5807202B972C3300ADDAF9 /* ContentView.swift */,
-				6C58071C2B972B4000ADDAF9 /* ArticleCache.swift */,
+				6C039E0D2B97413300C13679 /* ui */,
+				6C039E0C2B97412400C13679 /* repository */,
+				6C039E0B2B97411400C13679 /* models */,
 				6C5807192B972A3B00ADDAF9 /* Globals.swift */,
-				6C5807182B972A3B00ADDAF9 /* Repository.swift */,
 				6C5806EE2B95E07F00ADDAF9 /* TopNewsApp.swift */,
-				6C5807032B95E5E300ADDAF9 /* ArticlesViewModel.swift */,
-				6C5807012B95E22C00ADDAF9 /* ArticlesView.swift */,
-				6C5807222B972F5E00ADDAF9 /* ArticlesCachedView.swift */,
-				6C5807072B96288200ADDAF9 /* ArticleDetailView.swift */,
 				6C5806F22B95E08000ADDAF9 /* Assets.xcassets */,
 				6C5806F72B95E08000ADDAF9 /* Persistence.swift */,
 				6C5806F92B95E08000ADDAF9 /* TopNews.xcdatamodeld */,
